@@ -1,0 +1,10 @@
+/* Workaround for Slidev v51 quirk: the goto-dialog autocomplete list
+   bleeds through when the dialog is collapsed (.-top-20 class absent).
+   Hide by default; show only while the dialog is expanded. */
+#slidev-goto-dialog .autocomplete-list {
+  display: none;
+}
+
+#slidev-goto-dialog:not(.-top-20) .autocomplete-list {
+  display: block;
+}
