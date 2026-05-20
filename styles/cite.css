@@ -1,0 +1,40 @@
+/* Cite + Footnotes styles
+   Left-aligned footnotes are an intentional departure from slidev-theme-academic's
+   right-aligned <Footnote> — do not "fix" this back to right-aligned. */
+
+.a2i2-cite {
+  color: #3a1beb;
+  font-size: 0.75em;
+  vertical-align: super;
+  line-height: 0;
+  cursor: default;
+}
+
+.a2i2-cite-missing {
+  color: red;
+}
+
+.a2i2-footnotes {
+  margin-top: auto;
+  border-top: 1px solid var(--a2i2-secondary, #888);
+  padding-top: 0.3rem;
+  font-size: 0.68em;
+  color: var(--a2i2-fg);
+  line-height: 1.4;
+}
+
+.a2i2-footnote {
+  display: flex;
+  gap: 0.35em;
+  text-align: left;
+}
+
+.a2i2-footnote + .a2i2-footnote {
+  margin-top: 0.1rem;
+}
+
+.a2i2-footnote-num {
+  color: #3a1beb;
+  flex-shrink: 0;
+  font-weight: 600;
+}

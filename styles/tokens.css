@@ -1,0 +1,27 @@
+/*
+ * A²I² brand tokens — single source of truth for palette + spacing.
+ * Per design grilling (docs/PRD-slidev-port.md §"Brand"), every layout,
+ * component, and Shiki theme reads from these CSS variables. Change a
+ * hex here and the whole deck follows.
+ */
+
+:root {
+  /* Brand palette (PRD: lab brand-owner US #47) */
+  --a2i2-primary: #f05a40;
+  --a2i2-primary-light: #feece9;
+  --a2i2-secondary: #333333;
+  --a2i2-neutral-dark: #202124;
+  --a2i2-cite: #3a1beb;
+
+  /* Surfaces */
+  --a2i2-bg: #ffffff;
+  --a2i2-fg: var(--a2i2-neutral-dark);
+
+  /* Type stack. PRD §"Platform pins": Inter self-hosted (@fontsource/inter,
+     400/500/700) for prose; JetBrains Mono for code. System fallbacks keep
+     the deck legible if the @fontsource CSS fails to load. */
+  --a2i2-font-sans: "Inter", ui-sans-serif, system-ui, -apple-system,
+    "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --a2i2-font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo,
+    Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}

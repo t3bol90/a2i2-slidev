@@ -1,0 +1,42 @@
+/*
+ * Slidev auto-discovers this file (styles/index.css) at the project root
+ * and imports it into every slide. Keep this file as the entry that pulls
+ * in token + component stylesheets — rules below are limited to wiring
+ * the tokens into Slidev's existing CSS surface.
+ */
+
+@import "./tokens.css";
+@import "./fonts.css";
+@import "./theorem.css";
+@import "./cite.css";
+@import "./booktable.css";
+@import "./code.css";
+@import "./goto-dialog.css";
+
+/* Apply the brand type stack. Slidev's client root uses `--uno: font-sans`
+   on html/body/#app which resolves to UnoCSS's default system stack; we
+   override here so every slide picks up Inter. The .slidev-layout selector
+   covers content rendered inside layout components. */
+html,
+body,
+#app,
+.slidev-layout {
+  font-family: var(--a2i2-font-sans);
+}
+
+/* Slidev exposes --slidev-code-font-family for inline code + code blocks
+   (see @slidev/client/styles/vars.css). Point it at JetBrains Mono so
+   Shiki blocks inherit the brand mono face without per-component overrides. */
+:root {
+  --slidev-code-font-family: var(--a2i2-font-mono);
+}
+
+/* Inter inside `\text{...}` only. KaTeX wraps text-mode content in
+   `<span class="mord text">…</span>`; symbols (`mord mathnormal`,
+   `mord mathit`, etc.) stay in KaTeX's own metric-matched fonts so glyph
+   spacing and baselines remain correct. The narrow `.mord.text` selector
+   is intentional — broader rules like `.katex { font-family: … }` would
+   break math glyph rendering. */
+.katex .mord.text {
+  font-family: var(--a2i2-font-sans);
+}
