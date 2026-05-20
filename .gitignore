@@ -1,0 +1,23 @@
+# Init
+.claude
+.agents
+
+ralph
+
+# Node / pnpm
+node_modules
+.pnpm-store
+
+# Slidev / build artifacts
+dist
+*.local
+slides-export*.pdf
+.remote-assets
+components.d.ts
+composables/bibliography.json
+
+# OS / editor
+.DS_Store
+.vscode/*
+!.vscode/extensions.json
+.idea

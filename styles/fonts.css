@@ -1,0 +1,16 @@
+/*
+ * Self-hosted brand fonts. The PRD (§"Platform pins") requires Inter via
+ * @fontsource/inter (400/500/700) instead of Google Fonts CDN — decks must
+ * render with embedded fonts in PDF export and survive conference rooms
+ * with bad WiFi. JetBrains Mono is the code face.
+ *
+ * slides.md frontmatter sets `fonts.local: 'Inter, JetBrains Mono'` so
+ * Slidev skips its default Google Fonts injection.
+ */
+
+@import "@fontsource/inter/400.css";
+@import "@fontsource/inter/500.css";
+@import "@fontsource/inter/700.css";
+
+@import "@fontsource/jetbrains-mono/400.css";
+@import "@fontsource/jetbrains-mono/700.css";

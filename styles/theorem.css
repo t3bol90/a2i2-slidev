@@ -1,0 +1,35 @@
+/* TheoremLike family styles — sourced from src/TheoremLike.ts (a .ts render-
+   function component, not a .vue SFC, to avoid Slidev's per-SFC context
+   injection). Class prefix `.a2i2-theorem-like` is the namespacing boundary.
+
+   Visual per S5 acceptance: left primary-color 3px bar, bold label, no full
+   box, no tinted background. The bar is the load-bearing visual cue. */
+
+.a2i2-theorem-like {
+  border-left: 3px solid var(--a2i2-primary);
+  padding: 0.35rem 0.9rem;
+  margin: 0.8rem 0;
+  color: var(--a2i2-fg);
+}
+
+.a2i2-theorem-like .label {
+  font-weight: 700;
+  color: var(--a2i2-secondary);
+  margin-bottom: 0.25rem;
+  letter-spacing: 0.01em;
+}
+
+.a2i2-theorem-like .body p {
+  margin: 0;
+}
+
+.a2i2-theorem-like .body p + p {
+  margin-top: 0.4rem;
+}
+
+.a2i2-theorem-like .qed {
+  text-align: right;
+  margin-top: 0.3rem;
+  font-size: 1em;
+  color: var(--a2i2-secondary);
+}

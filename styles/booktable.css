@@ -1,0 +1,43 @@
+/* BookTable — opt-in booktabs-styled table wrapper.
+   Vanilla Markdown tables outside <BookTable> retain Slidev's default styling.
+   Class prefix .a2i2-book-table is the namespacing boundary. */
+
+.a2i2-book-table-caption {
+  font-style: italic;
+  color: var(--a2i2-secondary);
+  font-size: 0.85em;
+  margin-bottom: 0.4em;
+  opacity: 0.75;
+}
+
+.a2i2-book-table-footnote {
+  font-size: 0.8em;
+  color: var(--a2i2-secondary);
+  margin-top: 0.35em;
+  opacity: 0.65;
+}
+
+/* toprule + bottomrule: 1.5px; no vertical borders */
+.a2i2-book-table table {
+  width: 100%;
+  border-collapse: collapse;
+  border-top: 1.5px solid var(--a2i2-neutral-dark);
+  border-bottom: 1.5px solid var(--a2i2-neutral-dark);
+  border-left: none;
+  border-right: none;
+}
+
+.a2i2-book-table table th,
+.a2i2-book-table table td {
+  border: none;
+  padding: 0.5em 1em;
+  text-align: left;
+  background: transparent;
+}
+
+/* midrule: 0.5px border-top on first body row — correct for both
+   single-row and multi-row <thead> (including rowspan cases) */
+.a2i2-book-table table tbody tr:first-child th,
+.a2i2-book-table table tbody tr:first-child td {
+  border-top: 0.5px solid var(--a2i2-neutral-dark);
+}
